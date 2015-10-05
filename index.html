@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ticky - Tacky - Toejam &amp; Earl</title>
+    <link rel="stylesheet" href="css/main.css" charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <img src="img/toejam.gif" alt="Toejam &amp; Earl Dancing" />
+        <h1>Ticky - Tacky -<br>Toejam-&amp;-Earl</h1>
+        <!-- <h2>Score:</h2> -->
+      </header>
+      <div id="board">
+        <div class="column" id="c1">
+          <div class="row" id="r1"></div>
+          <div class="row" id="r2"></div>
+          <div class="row" id="r3"></div>
+        </div>
+        <div class="column" id="c2">
+          <div class="row" id="r4"></div>
+          <div class="row" id="r5"></div>
+          <div class="row" id="r6"></div>
+        </div>
+        <div class="column" id="c3">
+          <div class="row" id="r7"></div>
+          <div class="row" id="r8"></div>
+          <div class="row" id="r9"></div>
+        </div>
+      </div>
+      <div id="controls">
+        <button type="button" class="button" id="reset">Uh-Oh! All (toe)Jammed Up!</button>
+        <button type="button" class="button" id="stop">For God's Sake Stop Dancing!</button>
+        <!-- <button type="button" class="button" id="shutup">... And Shut Up!</button> -->
+      </div>
+      <footer>
+        <audio id="muzak" autoplay>
+          <source src="audio/toejam_short.mp3" type="audio/mpeg">
+          Your browser does not support the muzak.
+        </audio>
+        <audio id="scratch">
+          <source src="audio/record_scratch_short.mp3" type="audio/mpeg">
+          Your browser does not support the muzak.
+        </audio>
+      </footer>
+    </div>
+    <script src="js/tictactoe.js" charset="utf-8"></script>
+  </body>
+</html>
