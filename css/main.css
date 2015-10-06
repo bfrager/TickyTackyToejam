@@ -38,7 +38,7 @@ p {
 }
 
 #board {
-  width: 318px;
+  width: 350px;
   margin: 0 auto;
   margin-top: -20px;
 }
@@ -52,8 +52,9 @@ p {
   width: 100px;
   height: 100px;
   border: 3px solid #30C4C9;
-  padding: none;
-  box-shadow: 2px 2px 6px #63615F;
+  margin: 3px;
+  box-shadow: 1px 1px 3px #63615F;
+  border-radius: 10px;
 }
 
 #controls {
