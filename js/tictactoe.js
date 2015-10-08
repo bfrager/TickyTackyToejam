@@ -6,7 +6,7 @@ function addPiece() {
   if (this.innerHTML == "") {
     console.log('Adding ' + turn + ' to Square ' + this.getAttribute('id'));
     this.innerHTML = "<p>" + turn + "</p>";
-    squares[turn].push(this.getAttribute('id'));
+    squares[turn].push(Number(this.getAttribute('id')));
     if (((squares['X'].length + squares['O'].length) < 9) && ((squares['X'].length + squares['O'].length) > 4)) {
       getWinner(turn);
     } else if ((squares['X'].length + squares['O'].length) == 9) {
@@ -30,7 +30,9 @@ function getWinner(turn) {
   console.log("Checking for winner");
   for (i=0; i < (winningArrays.length); i++) {
     console.log("Checking if " + squares[turn] + " contains " + winningArrays[i]);
+    console.log("Squares Turn:",squares[turn]);
     if (isSuperset(squares[turn], winningArrays[i])) {
+      alert(turn + " wins!");
       console.log(turn + " wins!");
       return true;
     }
@@ -40,11 +42,14 @@ function getWinner(turn) {
 function isSuperset(arr1, arr2) {
 //  arr1 = arr1.sort(1);
 //  arr2 = arr2.sort(1);
-  arr2.every(function (val) {
+  arr2.every(function(val) {
     console.log("array2 value = " + val + ", array1 index of " + val + " = " + arr1.indexOf(val));
+    console.log("if check ----",arr1.indexOf(val));
     if (arr1.indexOf(val) >= 0) {
+      console.log("true");
       return true;
     } else {
+      console.log("not true");
       return false;
     }
   });
@@ -65,10 +70,8 @@ function stopDance() {
 }
 
 // EVENT LISTENERS
-var rows = document.querySelectorAll('row');
-console.log('rows =' + rows);
-
-//
+// var rows = document.querySelectorAll('row');
+// console.log('rows =' + rows);
 // for(var i = 0; i < rows.length; i++) {
 //   console.log(rows[i]);
 //   rows[i].addEventListener('click', function(){
